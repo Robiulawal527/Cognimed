@@ -12,7 +12,6 @@
       <label for="userInput">Describe your health issues:</label>
       <textarea id="userInput" rows="4" cols="50"></textarea>
       <button onclick="submitForm()">Get Prescription</button>
-      <button onclick="startVoiceRecognition()">Voice Input</button> <!-- Added voice input button -->
     </div>
     <div id="prescriptionResult"></div>
   </div>
@@ -32,5 +31,42 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    function startVoiceRecognition() {
+      const userInput = document.getElementById('userInput');
+
+      // Check if the browser supports speech recognition
+      if ('webkitSpeechRecognition' in window) {
+        const recognition = new webkitSpeechRecognition();
+
+        // Set the recognition language
+        recognition.lang = 'en-US';
+
+        // Start the recognition
+        recognition.start();
+
+        // Handle recognition result
+        recognition.onresult = function(event) {
+          const transcript = event.results[0][0].transcript;
+          userInput.value = transcript;
+        };
+
+        // Handle recognition error
+        recognition.onerror = function(event) {
+          console.error('Speech recognition error:', event.error);
+        };
+      } else {
+        console.error('Speech recognition not supported');
+      }
+    }
+
+    // Start voice recognition when the page loads
+    window.addEventListener('load', startVoiceRecognition);
+    
+    function submitForm() {
+      // Handle form submission here
+      // You can retrieve the health issues from the userInput textarea
+    }
+  </script>
 </body>
 </html>
