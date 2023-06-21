@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cognimed - Your Personal Doctor Bot</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Cognimed</h1>
+    <p>Talk to our doctor bot and get personalized health recommendations.</p>
+    <div class="form">
+      <label for="userInput">Describe your health issues:</label>
+      <textarea id="userInput" rows="4" cols="50"></textarea>
+      <button onclick="submitForm()">Get Prescription</button>
+    </div>
+    <div id="prescriptionResult"></div>
+  </div>
 
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
