@@ -1,3 +1,76 @@
+/* Global Styles     making the website responsive */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1200px) {
+  .container {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .form {
+    text-align: center;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  button {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
 body {
   background-color: #f8f8f8;
   font-family: 'Arial', sans-serif;
